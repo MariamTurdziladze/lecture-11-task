@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 150vh;
+    padding: 200px;
+    position: relative;
+    background-color: red;
+ 
+}
+
+.first {
+    position: absolute;
+    right: 40%;
+    animation: rotate 20s infinite linear;
+
+}
+
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.cloud {
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    animation: wave 1s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(-200%) translateY(30%);
+    }
+    50% {
+        transform: translateX(-400%) translateY(60%);
+    }
+    75% {
+        transform: translateX(-600%) translateY(-20%);
+    }
+    100% {
+        transform: translateX(-800%) translateY(-30%);
+    }
+}
+
+.second {
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    animation: tree 1s infinite ease-in-out;
+    
+}
+
+@keyframes tree {
+    0%{ transform: translateX(0);}
+    100%{transform: translateX(-1200%);}
+}
+
+.mario1 {
+    position: absolute;
+    left: 10%;
+    top: 59%;
+    animation: mario1 12s infinite ease-in-out;
+}
+
+@keyframes mario1 {
+    0%{ transform: translateX(0);}
+    100%{transform: translateX(1100%);}
+}
+
+.mario2 {
+    position: absolute;
+    right: 12%;
+    top: 68%;
+    animation: mario2 12s infinite ease-in-out;
+}
+
+@keyframes mario2 {
+    0%{ transform: translateX(0);}
+    40% {transform: translateX(-400%);}
+    70% {transform: translateX(-200);}
+    100%{transform: translateX(400%);}
+}
